@@ -1,0 +1,350 @@
+@import url(https://fonts.googleapis.com/css2?family=Space+Mono:wght@100;200;300;400;500;600;700&display=swap);
+
+:root {
+  /* Light Mode Colors */
+  --color-primary-light: #0079ff;
+  --color-secondary-light: #697c9a;
+  --color-tertiary-light: #4b6a9b;
+  --color-quaternary-light: #2b3442;
+  --color-background-light: #f6f8ff;
+  --color-surface-light: #fefefe;
+
+  /* Dark Mode Colors */
+  --color-primary-dark: #0079ff;
+  --color-secondary-dark: #ffffff;
+  --color-tertiary-dark: #141d2f;
+  --color-quaternary-dark: #1e2a47;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-tertiary-dark);
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  height: 100vh;
+  padding: 50px 10px 0 10px;
+}
+
+.container {
+  width: 730px;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+}
+
+.moad-container {
+  width: 89px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.moad-container p {
+  color: var(--color-secondary-dark);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.moad-container p:hover {
+  color: #90a4d4;
+}
+
+.sun,
+.moon {
+  cursor: pointer;
+}
+
+.moon {
+  display: none;
+}
+
+.search {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  padding: 9.5px 10px 9.5px 32px;
+  background-color: var(--color-quaternary-dark);
+  margin-bottom: 24px;
+  border-radius: 20px;
+}
+
+.search input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  color: var(--color-secondary-dark);
+}
+
+.search input:focus {
+  outline: none;
+}
+
+.noResult {
+  display: none;
+  color: #f74646;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 22.22px;
+  text-align: left;
+  width: 140px;
+}
+
+.search button {
+  padding: 13px 24px;
+  background-color: var(--color-primary-light);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 23.7px;
+  color: var(--color-secondary-dark);
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search button:hover {
+  background-color: #60abff;
+}
+
+.userImg {
+  max-width: 117px;
+  max-height: 117px;
+  border-radius: 50%;
+}
+
+main {
+  color: var(--color-secondary-dark);
+  background-color: var(--color-quaternary-dark);
+  border-radius: 20px;
+  user-select: none;
+  padding-bottom: 48px;
+}
+
+.userLink {
+  color: var(--color-primary-light);
+  text-decoration: none;
+}
+
+.user {
+  display: flex;
+  gap: 37px;
+  padding: 48px;
+}
+
+.userInfo {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.userBio {
+  font-size: 15px;
+  line-height: 25px;
+  width: 500px;
+}
+
+.followers {
+  display: flex;
+  justify-content: end;
+  padding-right: 48px;
+  width: 100%;
+}
+
+.followers-container {
+  display: flex;
+  gap: 99px;
+  background-color: var(--color-tertiary-dark);
+  padding: 15px 83px 15px 32px;
+  border-radius: 20px;
+  margin-bottom: 32px;
+}
+
+.followers-info {
+  text-align: center;
+}
+
+.followers-name {
+  font-size: 13px;
+  line-height: 19.25px;
+}
+
+.followers-amount {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 32.58px;
+}
+
+.contact {
+  display: flex;
+  justify-content: end;
+  padding-right: 90px;
+  width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  gap: 62px;
+}
+
+.contact-container-right,
+.contact-container-left {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.contact-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: text-decoration 0.3s ease;
+}
+
+.contact-text:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.location-light,
+.twitter-light,
+.link-light,
+.home-light {
+  display: none;
+}
+
+.location,
+.twitter,
+.link,
+.home {
+  display: block;
+}
+
+.locationLink,
+.linkLink,
+.twitterLink,
+.homeLink {
+  color: var(--color-secondary-dark);
+  text-decoration: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.locationLink,
+.linkLink {
+  width: 190px;
+}
+
+.homeLink {
+  width: 100px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .container {
+    margin: 0 80px;
+  }
+
+  .search {
+    gap: 15px;
+  }
+
+  .followers {
+    justify-content: start;
+    padding-left: 30px;
+  }
+
+  .followers-container {
+    padding-right: 85px;
+  }
+
+  .user {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .userInfo {
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+
+  .userBio {
+    font-size: 14px;
+    line-height: 22px;
+    margin-left: -120px;
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    margin-bottom: 36px;
+  }
+
+  .container {
+    margin: 0 40px;
+  }
+
+  .search {
+    gap: 5px;
+  }
+
+  .followers {
+    justify-content: start;
+    padding-left: 24px;
+  }
+
+  .followers-container {
+    gap: 35px;
+    padding: 18px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .contact {
+    justify-content: start;
+    padding-left: 24px;
+  }
+
+  .contact-container {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .user {
+    padding: 16px;
+    gap: 15px;
+  }
+
+  .userImg {
+    max-width: 70px;
+    max-height: 70px;
+  }
+
+  .userInfo {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .userBio {
+    font-size: 13px;
+    line-height: 20px;
+    margin-left: -80px;
+    margin-top: 20px;
+    width: 100%;
+  }
+}

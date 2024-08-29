@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="./images/userImg.png" />
+
+    <link rel="stylesheet" href="./style.css" />
+    <title>Devfinder</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <nav class="nav">
+          <div>
+            <img id="logo" src="./images/devfinder-dark-logo.png" alt="" />
+          </div>
+          <div class="moad-container">
+            <p id="lightDark">LIGHT</p>
+            <img src="./images/sun.svg" width="20" alt="sun" class="sun" />
+            <img src="./images/moon.png" width="20" alt="moon" class="moon" />
+          </div>
+        </nav>
+        <section class="search">
+          <div><img src="./images/loop.png" width="24" alt="loop" /></div>
+          <input type="text" placeholder="Search GitHub username…" autofocus />
+          <p class="noResult">No result</p>
+          <div>
+            <button id="searchUser">Search</button>
+          </div>
+        </section>
+      </header>
+
+      <main>
+        <section class="user">
+          <img
+            src="./images/userImg.png"
+            alt="user image"
+            class="userImg"
+            id="userImg"
+          />
+          <div>
+            <div class="userInfo" id="userInfo">
+              <div>
+                <h3 id="userName">The Octocat</h3>
+                <a class="userLink" target="_blank" id="userLink" href="#"
+                  >@octocat</a
+                >
+              </div>
+              <p id="createDate">Joined 25 Jan 2011</p>
+            </div>
+            <p class="userBio" id="userBio">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+              odio. Quisque volutpat mattis eros.
+            </p>
+          </div>
+        </section>
+
+        <section class="followers">
+          <div class="followers-container" id="followers-container">
+            <div class="followers-info">
+              <p class="followers-name">Repos</p>
+              <p class="followers-amount" id="repos">8</p>
+            </div>
+            <div class="followers-info">
+              <p class="followers-name">Followers</p>
+              <p class="followers-amount" id="followers">3938</p>
+            </div>
+            <div class="followers-info">
+              <p class="followers-name">Following</p>
+              <p class="followers-amount" id="following">9</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="contact">
+          <div class="contact-container">
+            <div class="contact-container-left">
+              <p class="contact-text">
+                <span>
+                  <img
+                    src="./images/location.png"
+                    width="13"
+                    height="20"
+                    id="location"
+                    class="location"
+                    alt="icon"
+                  />
+                  <img
+                    src="./images/location-light.png"
+                    width="13"
+                    height="20"
+                    class="location-light"
+                    id="location-light"
+                    alt="icon"
+                  />
+                </span>
+                <a
+                  href="#"
+                  id="locationInfo"
+                  target="_blank"
+                  class="locationLink"
+                  >San Francisco</a
+                >
+              </p>
+              <p class="contact-text">
+                <span>
+                  <img
+                    src="./images/link.png"
+                    width="20"
+                    id="link"
+                    class="link"
+                    alt="icon"
+                  />
+                  <img
+                    src="./images/link-light.png"
+                    width="20"
+                    id="link-light"
+                    class="link-light"
+                    alt="icon"
+                  />
+                </span>
+                <a href="#" id="linkInfo" target="_blank" class="linkLink"
+                  >https://github.blog</a
+                >
+              </p>
+            </div>
+            <div class="contact-container-right">
+              <p class="contact-text">
+                <span>
+                  <img
+                    src="./images/twitter.png"
+                    width="20"
+                    height="16"
+                    id="twitter"
+                    class="twitter"
+                    alt="icon"
+                  />
+                  <img
+                    src="./images/twitter-light.svg"
+                    width="20"
+                    height="16"
+                    id="twitter-light"
+                    class="twitter-light"
+                    alt="icon"
+                  />
+                </span>
+                <a href="#" id="twitterInfo" target="_blank" class="twitterLink"
+                  >Not Available</a
+                >
+              </p>
+              <p class="contact-text">
+                <span>
+                  <img
+                    src="./images/home.png"
+                    width="20"
+                    id="home"
+                    class="home"
+                    alt="icon"
+                  />
+                  <img
+                    src="./images/home-light.svg"
+                    width="20"
+                    id="home-light"
+                    class="home-light"
+                    alt="icon"
+                  />
+                </span>
+                <a href="#" id="homeInfo" target="_blank" class="homeLink"
+                  >@github</a
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
